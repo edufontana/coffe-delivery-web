@@ -1,4 +1,5 @@
 import { HeaderButton, HeaderButtonsContainer, HeaderContainer } from './styles'
+import { MapPin, ShoppingCart } from 'phosphor-react'
 import CoffeLogoImg from '../../assets/LogoHeader.svg'
 
 export function Header() {
@@ -7,7 +8,13 @@ export function Header() {
       <div className="container">
         <img src={CoffeLogoImg} alt="" />
         <HeaderButtonsContainer>
-          <HeaderButton>a</HeaderButton>
+          <HeaderButton variant="purple">
+            <MapPin size={20} weight="fill" />
+            Porto Alegre, RS
+          </HeaderButton>
+          <HeaderButton variant="yellow">
+            <ShoppingCart size={20} weight="fill" />
+          </HeaderButton>
         </HeaderButtonsContainer>
       </div>
     </HeaderContainer>
