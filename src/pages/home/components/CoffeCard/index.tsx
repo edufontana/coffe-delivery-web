@@ -1,4 +1,4 @@
-import { CoffeCardContainer, Tags, Name } from './styles'
+import { CoffeCardContainer, Tags, Name, Description } from './styles'
 
 export function CoffeCard() {
   return (
@@ -12,6 +12,7 @@ export function CoffeCard() {
         <span>trad2323i</span>
       </Tags>
       <Name>Expresso tradi</Name>
+      <Description>O Café feito com água quente e grãos moídos</Description>
     </CoffeCardContainer>
   )
 }

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { TitleText } from '../../../../components/Typography'
+import { RegularText, TitleText } from '../../../../components/Typography'
 
 export const CoffeCardContainer = styled.div`
   width: 100%;
@@ -11,6 +11,7 @@ export const CoffeCardContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding-top: 0;
+  text-align: center;
 
   img {
     width: 7.5rem;
@@ -45,4 +46,10 @@ export const Name = styled(TitleText).attrs({
   weight: '700',
 })`
   margin-bottom: 0.5rem;
+`
+export const Description = styled(RegularText).attrs({
+  size: 's',
+  color: 'label',
+})`
+  margin-bottom: 2rem;
 `
