@@ -5,7 +5,7 @@ An awesome application to get a coffee
 
 ## Layout mobile
 <p align="center">
-  <img src="../coffe-delivery-web/public/appHome.png" width="100%" height="100%">
+  <img src="src/assets/appHome.png" width="100%" height="100%">
 </p>
 
 # Stack and Features
