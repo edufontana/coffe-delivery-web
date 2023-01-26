@@ -1,4 +1,11 @@
-import { CoffeCardContainer, Tags, Name, Description } from './styles'
+import { RegularText, TitleText } from '../../../../components/Typography'
+import {
+  CoffeCardContainer,
+  Tags,
+  Name,
+  Description,
+  CardFooter,
+} from './styles'
 
 export function CoffeCard() {
   return (
@@ -13,6 +20,15 @@ export function CoffeCard() {
       </Tags>
       <Name>Expresso tradi</Name>
       <Description>O Café feito com água quente e grãos moídos</Description>
+
+      <CardFooter>
+        <div>
+          <RegularText size="s">R$</RegularText>
+          <TitleText size="m" color="text" as="strong">
+            9,90
+          </TitleText>
+        </div>
+      </CardFooter>
     </CoffeCardContainer>
   )
 }
