@@ -9,11 +9,10 @@ function App() {
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyle />
       <BrowserRouter>
-        <Router/>
+        <Router />
       </BrowserRouter>
     </ThemeProvider>
   )
 }
 
 export default App
- 
