@@ -1,4 +1,5 @@
 import { TitleText } from '../../../../components/Typography'
+import { CoffeeCartCard } from '../CoffeeCartCard'
 import { SelectedCoffeesContainer, DetailsContainer } from './styles'
 
 export function SelectedCoffees() {
@@ -8,7 +9,9 @@ export function SelectedCoffees() {
         Cafés Selecionados
       </TitleText>
       <DetailsContainer>
-        <p>itens</p>
+        <CoffeeCartCard></CoffeeCartCard>
+        <CoffeeCartCard></CoffeeCartCard>
+        <CoffeeCartCard></CoffeeCartCard>
       </DetailsContainer>
     </SelectedCoffeesContainer>
   )
