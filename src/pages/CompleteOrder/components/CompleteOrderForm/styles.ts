@@ -20,5 +20,17 @@ export const AdressFormContainer = styled.div`
   column-gap: 0.75rem;
   row-gap: 1rem;
   grid-auto-flow: dense;
-  background-color: red;
+
+  .cep {
+    grid-column: span 3;
+    max-width: 12.5rem;
+  }
+
+  .street {
+    grid-column: span 3;
+  }
+
+  .complement {
+    grid-column: span 2;
+  }
 `
