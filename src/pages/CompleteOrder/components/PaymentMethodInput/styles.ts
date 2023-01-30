@@ -15,6 +15,10 @@ export const PaymentMethodContainer = styled.div`
   border: 1px solid ${({ theme }) => theme.colors['base-button']};
   transition: 0.4s;
 
+  svg {
+    color: ${({ theme }) => theme.colors['brand-purple']};
+  }
+
   &:hover {
     background: ${({ theme }) => theme.colors['base-hover']};
   }
