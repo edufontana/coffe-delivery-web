@@ -19,8 +19,43 @@ export const CoffeeCartCardContainer = styled.div`
       height: 4rem;
     }
   }
+  > p {
+    font-weight: 700;
+    align-self: flex-start;
+  }
 `
 
-export const ActionsContainer = styled.div``
+export const ActionsContainer = styled.div`
+  margin-top: 0.5rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 
-export const RemoveButton = styled.button``
+  > div {
+    max-width: 4.5rem;
+    height: 100%;
+  }
+`
+
+export const RemoveButton = styled.button`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: ${({ theme }) => theme.colors['base-text']};
+  font-size: 0.75rem;
+  height: 100%;
+  border: none;
+  background: ${({ theme }) => theme.colors['base-button']};
+  padding: 0 0.5rem;
+  border-radius: 6px;
+  transition: 0.4s;
+
+  &:hover {
+    background: ${({ theme }) => theme.colors['base-hover']};
+  }
+
+  svg {
+    color: ${({ theme }) => theme.colors['brand-purple']};
+  }
+`
