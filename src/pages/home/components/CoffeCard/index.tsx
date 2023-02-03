@@ -11,7 +11,7 @@ import {
 import { ShoppingCart } from 'phosphor-react'
 import { formatNumber } from '../../../../utils/formatMoney'
 
-interface Coffee {
+export interface Coffee {
   id: number
   tags: string[]
   name: string
