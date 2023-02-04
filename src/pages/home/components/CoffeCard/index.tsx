@@ -10,6 +10,7 @@ import {
 } from './styles'
 import { ShoppingCart } from 'phosphor-react'
 import { formatNumber } from '../../../../utils/formatMoney'
+import { useCart } from '../../../../hooks/useCart'
 
 export interface Coffee {
   id: number
@@ -25,6 +26,16 @@ interface CoffeeProps {
 }
 
 export function CoffeCard({ coffee }: CoffeeProps) {
+  const { addCoffeToCart } = useCart()
+
+  function handleAddToCart() {
+    const coffeeToAdd = {
+      ...coffee,
+      quantity: 1,
+    }
+    addCoffeToCart(coffeeToAdd)
+  }
+
   const formattedPrice = formatNumber(coffee.price)
 
   return (
@@ -48,7 +59,7 @@ export function CoffeCard({ coffee }: CoffeeProps) {
 
         <AddCartWrapper>
           <QuantityInput />
-          <button>
+          <button onClick={handleAddToCart}>
             <ShoppingCart size={22} weight="fill" />
           </button>
         </AddCartWrapper>
