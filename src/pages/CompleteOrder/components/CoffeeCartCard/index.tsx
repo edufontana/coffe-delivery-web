@@ -6,16 +6,28 @@ import {
   RemoveButton,
 } from './styles'
 import { Trash } from 'phosphor-react'
+import { CartItem } from '../../../../contexts/CartContext'
+import { formatNumber } from '../../../../utils/formatMoney'
 
-export function CoffeeCartCard() {
+interface CoffeeCartCardProps {
+  coffee: CartItem
+}
+
+export function CoffeeCartCard({ coffee }: CoffeeCartCardProps) {
+  const coffeeTotal = coffee.price * coffee.quantity
+  const formattedPrice = formatNumber(coffeeTotal)
+
   return (
     <CoffeeCartCardContainer>
       <div>
-        <img src={`https://github.com/edufontana.png`} alt="" />
+        <img src={`/coffees/${coffee.photo}`} alt="" />
         <div>
           <RegularText color="subtitle">Expresso tradi</RegularText>
           <ActionsContainer>
-            <QuantityInput size="small"></QuantityInput>
+            <QuantityInput
+              size="small"
+              quantity={coffee.quantity}
+            ></QuantityInput>
             <RemoveButton>
               <Trash size={16}>Remover</Trash>
             </RemoveButton>
@@ -23,7 +35,7 @@ export function CoffeeCartCard() {
         </div>
       </div>
 
-      <p>Rs 9,90</p>
+      <p>{formattedPrice}</p>
     </CoffeeCartCardContainer>
   )
 }
